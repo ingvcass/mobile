@@ -54,4 +54,10 @@ def ost (a,b):
         return str(a % b)
     else:
         return (str('делитель ноль'))
+@app.route('/cel/<float:a>/<float:b>')
+def cel (a,b):
+    if (b != 0):
+        return str(a // b)
+    else:
+        return (str('делитель ноль'))
 app.run(host='0.0.0.0', debug = True)
