@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "04ff8b78-b09e-4b7b-a6a0-4f97bf70342d",
+		"name": "Тригонометрия",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30353169",
+		"_collection_link": "https://www.postman.com/ingvcass/workspace/lab12-testing-lab11/collection/30353169-04ff8b78-b09e-4b7b-a6a0-4f97bf70342d?action=share&source=collection_link&creator=30353169"
+	},
+	"item": [
+		{
+			"name": "Позитивные",
+			"item": [
+				{
+					"name": "Градусы",
+					"item": [
+						{
+							"name": "Синус",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ingvcass.pythonanywhere.com/sin/30?mode=degrees",
+									"protocol": "https",
+									"host": [
+										"ingvcass",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sin",
+										"30"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "degrees"
+										}
+									]
+								},
+								"description": "а = 30\n\nОр = 1/2"
+							},
+							"response": []
+						},
+						{
+							"name": "Косинус",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ingvcass.pythonanywhere.com/cos/30?mode=degrees",
+									"protocol": "https",
+									"host": [
+										"ingvcass",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"cos",
+										"30"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "degrees"
+										}
+									]
+								},
+								"description": "а = 30\n\nОр = 0.86"
+							},
+							"response": []
+						},
+						{
+							"name": "Тангенс",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ingvcass.pythonanywhere.com/tg/30?mode=degrees",
+									"protocol": "https",
+									"host": [
+										"ingvcass",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tg",
+										"30"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "degrees"
+										}
+									]
+								},
+								"description": "а = 30\n\nОр = 0.57"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Радианы",
+					"item": [
+						{
+							"name": "Синус",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ingvcass.pythonanywhere.com/sin/30",
+									"protocol": "https",
+									"host": [
+										"ingvcass",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sin",
+										"30"
+									]
+								},
+								"description": "а = 30\n\nОр = -0.98"
+							},
+							"response": []
+						},
+						{
+							"name": "Косинус",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ingvcass.pythonanywhere.com/cos/30",
+									"protocol": "https",
+									"host": [
+										"ingvcass",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"cos",
+										"30"
+									]
+								},
+								"description": "а = 30\n\nОр = 0.15"
+							},
+							"response": []
+						},
+						{
+							"name": "Тангенс",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ingvcass.pythonanywhere.com/tg/30",
+									"protocol": "https",
+									"host": [
+										"ingvcass",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tg",
+										"30"
+									]
+								},
+								"description": "а = 30\n\nОр = -6.40"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Негативные",
+			"item": [
+				{
+					"name": "Тангенс 90",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/tg/90?mode=degrees",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"tg",
+								"90"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "degrees"
+								}
+							]
+						},
+						"description": "а = 90\n\nОр = не существует"
+					},
+					"response": []
+				},
+				{
+					"name": "Тангенс 270",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/tg/270?mode=degrees",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"tg",
+								"270"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "degrees"
+								}
+							]
+						},
+						"description": "а = 270\n\nОр = не существует"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

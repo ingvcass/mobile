@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "dcaa89d0-f10e-4e6d-bc2f-56a33bca90e3",
+		"name": "Обычные команды",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30353169",
+		"_collection_link": "https://www.postman.com/ingvcass/workspace/lab12-testing-lab11/collection/30353169-dcaa89d0-f10e-4e6d-bc2f-56a33bca90e3?action=share&source=collection_link&creator=30353169"
+	},
+	"item": [
+		{
+			"name": "позитивные",
+			"item": [
+				{
+					"name": "Сложение",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/sum/10/20",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"sum",
+								"10",
+								"20"
+							]
+						},
+						"description": "а = 10.0\n\nb = 20.0\n\nОр = 30.0"
+					},
+					"response": []
+				},
+				{
+					"name": "Вычитание",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/min/10/20",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"min",
+								"10",
+								"20"
+							]
+						},
+						"description": "а = 10.0\n\nb = 20.0\n\nОр = -10.0"
+					},
+					"response": []
+				},
+				{
+					"name": "Умножение",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/mul/10/20",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"mul",
+								"10",
+								"20"
+							]
+						},
+						"description": "а = 10.0\n\nb = 20.0\n\nОр = 200.0"
+					},
+					"response": []
+				},
+				{
+					"name": "Целочисленное деление",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/cel/10/3",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"cel",
+								"10",
+								"3"
+							]
+						},
+						"description": "а = 10.0\n\nb = 3.0\n\nОр = 3.0"
+					},
+					"response": []
+				},
+				{
+					"name": "Деление",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/deli/10/20",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"deli",
+								"10",
+								"20"
+							]
+						},
+						"description": "а = 10.0\n\nb = 20.0\n\nОр = 0.5"
+					},
+					"response": []
+				},
+				{
+					"name": "Корень",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/sqrt/4",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"sqrt",
+								"4"
+							]
+						},
+						"description": "а = 4.0\n\nОр = 2.0"
+					},
+					"response": []
+				},
+				{
+					"name": "Степень",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/ste/4/2",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"ste",
+								"4",
+								"2"
+							]
+						},
+						"description": "а = 4.0\n\nb = 2.0\n\nОр = 16.0"
+					},
+					"response": []
+				},
+				{
+					"name": "Остаток от деления",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/ost/10/3",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"ost",
+								"10",
+								"3"
+							]
+						},
+						"description": "а = 10.0\n\nb = 3.0\n\nОр = 1.0"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Негативные",
+			"item": [
+				{
+					"name": "Деление на 0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/deli/10.0/0.0",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"deli",
+								"10.0",
+								"0.0"
+							]
+						},
+						"description": "а = 10.0\n\nb = 0.0\n\nОр = сообщение о невозможности деления"
+					},
+					"response": []
+				},
+				{
+					"name": "Корень отрицательный",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/sqrt/-1.0",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"sqrt",
+								"-1.0"
+							]
+						},
+						"description": "а = -1.0\n\nОр = сообщение о невозможности изьятия корня"
+					},
+					"response": []
+				},
+				{
+					"name": "Целочисленное деление на 0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/cel/10/0",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"cel",
+								"10",
+								"0"
+							]
+						},
+						"description": "а = 10.0\n\nb = 0.0\n\nОр = сообщение о невозможности деления"
+					},
+					"response": []
+				},
+				{
+					"name": "Остаток от деления  на 0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingvcass.pythonanywhere.com/ost/10/0",
+							"protocol": "https",
+							"host": [
+								"ingvcass",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"ost",
+								"10",
+								"0"
+							]
+						},
+						"description": "а = 10.0\n\nb = 0.0\n\nОр = сообщение о невозможности деления"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
