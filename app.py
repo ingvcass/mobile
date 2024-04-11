@@ -32,59 +32,83 @@ def start():
 </html>
     """
     return start
-@app.route('/sum/<float:a>/<float:b>')
+@app.route('/sum/<a>/<b>')
 def sum (a,b):
+    a = float(a)
+    b = float(b)
     return str(a+b)
-@app.route('/min/<float:a>/<float:b>')
+@app.route('/min/<a>/<b>')
 def min (a,b):
+    a = float(a)
+    b = float(b)
     return str(a-b)
-@app.route('/mul/<float:a>/<float:b>')
+@app.route('/mul/<a>/<b>')
 def mul (a,b):
+    a = float(a)
+    b = float(b)
     return str(a*b)
-@app.route('/deli/<float:a>/<float:b>')
+@app.route('/deli/<a>/<b>')
 def deli (a,b):
+    a = float(a)
+    b = float(b)
     if (b != 0):
         return str(a/b)
     else:
         return (str('делитель ноль'))
-@app.route('/sin/<float:a>')
+@app.route('/sin/<a>')
 def sin (a):
+    a = float(a)
     mode = request.args.get('mode', default='radians')
     if mode == 'degrees':
         return str(math.sin(math.radians(a)))
     else:
         return str(math.sin(a))
-@app.route('/cos/<float:a>')
+@app.route('/cos/<a>')
 def cos(a):
+    a = float(a)
     mode = request.args.get('mode', default='radians')
     if mode == 'degrees':
         return str(math.cos(math.radians(a)))
     else:
         return str(math.cos(a))
-@app.route('/tg/<float:a>')
+@app.route('/tg/<a>')
 def tg(a):
+    a = float(a)
     mode = request.args.get('mode', default='radians')
     if mode == 'degrees':
-        return str(math.tan(math.radians(a)))
+        if (a == 90 or a == 270):
+            return str ('не существует')
+        else:
+            return str(math.tan(math.radians(a)))
     else:
-        return str(math.tan(a))
-@app.route('/sqrt/<float:a>')
+        if (a == (math.pi/2) or a == (3*math.pi/2)):
+            return str ('не существует')
+        else:
+            return str(math.tan(a))
+@app.route('/sqrt/<a>')
 def sqrt (a):
+    a = float(a)
     if (a < 0):
         return str('меньше 0')
     else:
         return str(math.sqrt(a))
-@app.route('/ste/<float:a>/<float:b>')
+@app.route('/ste/<a>/<b>')
 def ste (a,b):
+    a = float(a)
+    b = float(b)
     return str(a**b)
-@app.route('/ost/<float:a>/<float:b>')
+@app.route('/ost/<a>/<b>')
 def ost (a,b):
+    a = float(a)
+    b = float(b)
     if (b != 0):
         return str(a % b)
     else:
         return (str('делитель ноль'))
-@app.route('/cel/<float:a>/<float:b>')
+@app.route('/cel/<a>/<b>')
 def cel (a,b):
+    a = float(a)
+    b = float (b)
     if (b != 0):
         return str(a // b)
     else:
